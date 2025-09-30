@@ -1,6 +1,7 @@
 body {
-  background-color: rgb(1, 16, 3);
+  background-color: rgb(1, 8, 1);
   margin: 0px;
+  overflow: hidden;
 }
 
 #menu {  
@@ -16,64 +17,53 @@ body {
   z-index: 2;
 }
 
-#menu[data-active-index="0"] > #menu-background-pattern {
+#menu[data-active-index="0"] > .spade {
   background-position: 0% -25%;
 }
 
-#menu[data-active-index="1"] > #menu-background-pattern {
+#menu[data-active-index="1"] > .spade {
   background-position: 0% -50%;
 }
 
-#menu[data-active-index="2"] > #menu-background-pattern {
+#menu[data-active-index="2"] > .spade {
   background-position: 0% -75%;
 }
 
-#menu[data-active-index="3"] > #menu-background-pattern {
+#menu[data-active-index="3"] > .spade {
   background-position: 0% -100%;
 }
 
-#menu[data-active-index="0"] > #menu-background-image {
-  background-position: center 45%;
-}
-
-#menu[data-active-index="1"] > #menu-background-image {
-  background-position: center 50%;
-}
-
-#menu[data-active-index="2"] > #menu-background-image {
-  background-position: center 55%;
-}
-
-#menu[data-active-index="3"] > #menu-background-image {
-  background-position: center 60%;
-}
-
 #menu-background-pattern {
-  background-image: radial-gradient(
-    rgba(255, 255, 255, 0.1) 9%, 
-    transparent 9%
-  );
+  background-repeat: no-repeat;
   background-position: 0% 0%;
-  background-size: 12vmin 12vmin;
-  height: 100vh;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  transition: opacity 800ms ease, 
-    background-size 800ms ease,
-    background-position 800ms ease;
+  height: 400vh;
   width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-position 800ms ease, background-size 800ms ease, opacity 800ms ease;
   z-index: 1;
 }
 
+.spade {
+  background: url(spade.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: auto;
+  height: 50vh;
+  opacity: 0.3;
+  transition: transform 800ms ease, opacity 800ms ease;
+  position: relative;
+  filter: brightness(0) invert(1);
+}
+
 #menu-items:hover ~ #menu-background-pattern {
-  background-size: 11vmin 11vmin;
-  opacity: 0.5;
+  opacity: 0.1;
+  background-size: 130vmin auto;
 }
 
 #menu-items:hover ~ #menu-background-image {
-  background-size: 100vmax;
-  opacity: 0.1;
+  background-size: 90vmax;
 }
 
 #menu-items:hover > .menu-item {
@@ -95,57 +85,6 @@ body {
   transition: opacity 400ms ease;
 }
 
-/* -- YouTube Link Styles -- */
-
-body.menu-toggled > .meta-link > span {
-  color: rgb(30, 30, 30);
-}
-
-#source-link {
-  bottom: 60px;
-}
-
-#source-link > i {
-  color: rgb(94, 106, 210);
-}
-
-#yt-link > i {
-  color: rgb(239, 83, 80);
-}
-
-.meta-link {
-  align-items: center;
-  backdrop-filter: blur(3px);
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  bottom: 10px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  cursor: pointer;  
-  display: inline-flex;
-  gap: 5px;
-  left: 10px;
-  padding: 10px 20px;
-  position: fixed;
-  text-decoration: none;
-  transition: background-color 400ms, border-color 400ms;
-  z-index: 10000;
-}
-
-.meta-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.meta-link > i, .meta-link > span {
-  height: 20px;
-  line-height: 20px;
-}
-
-.meta-link > span {
-  color: white;
-  font-family: "Rubik", sans-serif;
-}
 
 .menu-link {
   text-decoration: none;
