@@ -146,3 +146,8 @@ body.menu-toggled > .meta-link > span {
   color: white;
   font-family: "Rubik", sans-serif;
 }
+
+.menu-link {
+  text-decoration: none;
+  color: white;
+}
