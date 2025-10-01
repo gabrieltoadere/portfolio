@@ -18,25 +18,25 @@ body {
 }
 
 #menu[data-active-index="0"] > #menu-background-pattern .spade {
-  transform: translateY(0%);
+  transform: translateY(0vh);
 }
 
 #menu[data-active-index="1"] > #menu-background-pattern .spade {
-  transform: translateY(-100%);
+  transform: translateY(-100vh);
 }
 
 #menu[data-active-index="2"] > #menu-background-pattern .spade {
-  transform: translateY(-200%);
+  transform: translateY(-200vh);
 }
 
 #menu[data-active-index="3"] > #menu-background-pattern .spade {
-  transform: translateY(-300%);
+  transform: translateY(-300vh);
 }
 
 #menu-background-pattern {
   background-repeat: no-repeat;
   background-position: 0% 0%;
-  height: 100vh;
+  height: 400vh;
   width: 100vw;
   position: absolute;
   top: 0;
@@ -46,7 +46,7 @@ body {
 }
 
 .spade {
-  opacity: 0.3;
+  opacity: 0.2;
   transition: transform 800ms ease, opacity 800ms ease;
   position: relative;
   filter: brightness(0) invert(1);
@@ -57,9 +57,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   width: auto;
-  height: 130vmin;
-  background-position: -40vw -6vw;
-  margin: 0;
+  height: 100vh;
+  background-position: -40vw 0vw;
 }
 
 .symbol-diamond {
@@ -67,11 +66,28 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   width: auto;
-  height: 100vmin;
-  background-position: -20vw -5vw;
+  height: 100vh;
+  background-position: -22vw 0vw;
 }
 
-.symbol
+.symbol-club {
+  background: url(club.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: auto;
+  height: 100vh;
+  background-position: -27vw 0vw;
+}
+
+.symbol-heart {
+  background: url(heart.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: auto;
+  margin-top: 10vh;
+  height: 90vh;
+  background-position: -21vw 0vw;
+}
 
 #menu-items:hover ~ #menu-background-pattern {
   opacity: 0.2;
