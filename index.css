@@ -37,7 +37,7 @@ body {
   background-repeat: no-repeat;
   background-position: 0% 0%;
   height: 400vh;
-  width: 100vw;
+  width: 200vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -90,25 +90,32 @@ body {
   background-position: -21vw 0vw;
 }
 
+.symbol-spade,
+.symbol-diamond,
+.symbol-club,
+.symbol-heart {
+  opacity: 0.2;
+  transition: transform 800ms ease, opacity 800ms ease;
+  position: relative;
+  filter: brightness(0) invert(1);
+  transform-origin: center center;
+}
+
 #menu-items:hover ~ #menu-background-pattern {
   opacity: 0.2;
 }
 
 #menu-items:hover ~ #menu-background-pattern > .symbol-spade {
-  background-position: -38vw 0vw;
+  background-position: -34vw 0vw;
 }
 #menu-items:hover ~ #menu-background-pattern > .symbol-diamond {
-  background-position: -19vw 0vw;
+  background-position: -13vw 0vw;
 }
 #menu-items:hover ~ #menu-background-pattern > .symbol-club {
-  background-position: -25vw 0vw;
-}
-#menu-items:hover ~ #menu-background-pattern > .symbol-heart {
   background-position: -18vw 0vw;
 }
-
-#menu-items:hover ~ #menu-background-image {
-  background-size: 90vmax;
+#menu-items:hover ~ #menu-background-pattern > .symbol-heart {
+  background-position: -11vw 0vw;
 }
 
 #menu-items:hover > .menu-item {

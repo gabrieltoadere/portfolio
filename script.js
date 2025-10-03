@@ -17,27 +17,3 @@ for(const card of document.getElementsByClassName("card")) {
     card.style.setProperty("--mouse-y", `${y}px`);
   };
 }
-document.addEventListener('DOMContentLoaded', function() {
-const menuItems = document.getElementById('menu-items');
-const backgroundDivs = document.querySelectorAll('.menu-background-pattern div');
-
-console.log('Menu items found:', menuItems);
-console.log('Background divs found:', backgroundDivs);
-
-menuItems.addEventListener('mouseenter', () => {
-  console.log('Hover started!');
-  backgroundDivs.forEach(div => {
-    div.style.backgroundPosition = '-30vw 0vw !important';
-    div.style.backgroundColor = 'red'; // Temporary to test
-  });
-});
-
-menuItems.addEventListener('mouseleave', () => {
-  console.log('Hover ended!');
-  backgroundDivs.forEach(div => {
-    div.style.backgroundPosition = '0vw 0vw';
-    div.style.backgroundColor = ''; // Reset
-  });
-});
-
-});s
