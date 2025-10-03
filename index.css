@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(0, 25, 0);
+  background-color: rgb(0, 18, 0);
   margin: 0px;
   overflow: hidden;
 }
@@ -41,13 +41,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: background-position 800ms ease, background-size 800ms ease, opacity 800ms ease;
+  transition: background-position 800ms ease, background-size 800ms ease, opacity 800ms ease,transform 800ms ease;
   z-index: 1;
 }
 
 .spade {
   opacity: 0.2;
-  transition: transform 800ms ease, opacity 800ms ease,background-position 800ms ease,background-size 800ms ease;
+  transition: transform 800ms ease, opacity 800ms ease,background-position 800ms ease,background-size 800ms ease,
+  height 800ms ease;
   position: relative;
   filter: brightness(0) invert(1);
 }
@@ -94,7 +95,16 @@ body {
 }
 
 #menu-items:hover ~ #menu-background-pattern > .symbol-spade {
-  background-position: -33vw 0vw;
+  background-position: -38vw 0vw;
+}
+#menu-items:hover ~ #menu-background-pattern > .symbol-diamond {
+  background-position: -19vw 0vw;
+}
+#menu-items:hover ~ #menu-background-pattern > .symbol-club {
+  background-position: -25vw 0vw;
+}
+#menu-items:hover ~ #menu-background-pattern > .symbol-heart {
+  background-position: -18vw 0vw;
 }
 
 #menu-items:hover ~ #menu-background-image {
@@ -113,11 +123,11 @@ body {
   color: white;
   cursor: pointer;
   display: block;
-  font-family: 'Ibarra Real Nova', serif;
-  font-size: clamp(3rem, 8vw, 8rem);
+  font-size: clamp(3rem, 8vw, 5rem);
   padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
   text-decoration: none;
   transition: opacity 400ms ease;
+  font-family: "Overpass";
 }
 
 
