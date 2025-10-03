@@ -17,19 +17,19 @@ body {
   z-index: 2;
 }
 
-#menu[data-active-index="0"] > #menu-background-pattern .spade {
+#menu[data-active-index="0"] > #menu-background-pattern .symbol {
   transform: translateY(0vh);
 }
 
-#menu[data-active-index="1"] > #menu-background-pattern .spade {
+#menu[data-active-index="1"] > #menu-background-pattern .symbol {
   transform: translateY(-100vh);
 }
 
-#menu[data-active-index="2"] > #menu-background-pattern .spade {
+#menu[data-active-index="2"] > #menu-background-pattern .symbol {
   transform: translateY(-200vh);
 }
 
-#menu[data-active-index="3"] > #menu-background-pattern .spade {
+#menu[data-active-index="3"] > #menu-background-pattern .symbol {
   transform: translateY(-300vh);
 }
 
@@ -45,49 +45,59 @@ body {
   z-index: 1;
 }
 
-.spade {
-  opacity: 0.2;
-  transition: transform 800ms ease, opacity 800ms ease,background-position 800ms ease,background-size 800ms ease,
-  height 800ms ease;
+.symbol{
   position: relative;
-  filter: brightness(0) invert(1);
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  transition: transform 800ms ease,
+  opacity 800ms ease,background-position 800ms ease,
+  background-size 800ms ease, height 800ms ease;
 }
 
 .symbol-spade{
-  background: url(spade.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: auto;
-  height: 100vh;
-  background-position: -40vw 0vw;
+  position: absolute;
+  left: -40vw; 
+  top: 0;
+  height: 100%;
+  transition: transform 800ms ease;
+  transform-origin: center center;
 }
 
 .symbol-diamond {
-  background: url(diamond.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: auto;
-  height: 100vh;
-  background-position: -22vw 0vw;
+  position: absolute;
+  left: -22vw;
+  top: 2vw;
+  height: 100%;
+  transition: transform 800ms ease;
+  transform-origin: center center;
 }
 
 .symbol-club {
-  background: url(club.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: auto;
-  height: 100vh;
-  background-position: -27vw 0vw;
+  position: absolute;
+  left: -27vw;
+  top: 1vw;
+  height: 100%;
+  transition: transform 800ms ease;
+  transform-origin: center center;
 }
 
 .symbol-heart {
-  background: url(heart.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  width: auto;
-  margin-top: 10vh;
-  height: 90vh;
-  background-position: -21vw 0vw;
+  background-size: 57vw;
+  width: 300vw;
+  height: 100vh;
+  background-position: -21vw 3vw;
+}
+
+.symbol-spade,
+.symbol-diamond,
+.symbol-club,
+.symbol-heart {
+  opacity: 0.2;
+  position: relative;
+  filter: brightness(0) invert(1);
+  transform-origin: center center;
 }
 
 #menu-items:hover ~ #menu-background-pattern {
@@ -95,16 +105,17 @@ body {
 }
 
 #menu-items:hover ~ #menu-background-pattern > .symbol-spade {
-  background-position: -38vw 0vw;
+  background-position: -30vw 0vw;
+  transform: scale(0.9);
 }
 #menu-items:hover ~ #menu-background-pattern > .symbol-diamond {
-  background-position: -19vw 0vw;
+  background-position: -19vw 2vw;
 }
 #menu-items:hover ~ #menu-background-pattern > .symbol-club {
-  background-position: -25vw 0vw;
+  background-position: -24vw 1vw;
 }
 #menu-items:hover ~ #menu-background-pattern > .symbol-heart {
-  background-position: -18vw 0vw;
+  background-position: -18vw 3vw;
 }
 
 #menu-items:hover ~ #menu-background-image {
