@@ -66,27 +66,29 @@ body {
 
 .symbol-diamond {
   position: absolute;
-  left: -22vw;
+  left: -19vw;
   top: 2vw;
-  height: 100%;
+  height: 95%;
   transition: transform 800ms ease;
   transform-origin: center center;
 }
 
 .symbol-club {
   position: absolute;
-  left: -27vw;
-  top: 1vw;
-  height: 100%;
+  left: -24vw;
+  top: 2vw;
+  height: 95%;
   transition: transform 800ms ease;
   transform-origin: center center;
 }
 
 .symbol-heart {
-  background-repeat: no-repeat;
-  background-size: 57vw;
-  width: 300vw;
-  height: 100vh;
+  position: absolute;
+  left: -22vw;
+  top: 2vw;
+  height: 90%;
+  transition: transform 800ms ease;
+  transform-origin: center center;
   background-position: -21vw 3vw;
 }
 
@@ -115,13 +117,17 @@ body {
   opacity: 0.2;
 }
 
-#menu-items:hover ~ #menu-background-pattern > .symbol-spade {
+#menu-items:hover ~ #menu-background-pattern .symbol-spade {
+  transform: translateX(6vw) scale(0.9);
 }
-#menu-items:hover ~ #menu-background-pattern > .symbol-diamond {
+#menu-items:hover ~ #menu-background-pattern .symbol-diamond {
+  transform: translateX(7vw) scale(0.9);
 }
-#menu-items:hover ~ #menu-background-pattern > .symbol-club {
+#menu-items:hover ~ #menu-background-pattern .symbol-club {
+  transform: translateX(7vw) scale(0.9);
 }
-#menu-items:hover ~ #menu-background-pattern > .symbol-heart {
+#menu-items:hover ~ #menu-background-pattern .symbol-heart {
+  transform: translateX(10vw) scale(0.9);
 }
 
 #menu-items:hover ~ #menu-background-image {
